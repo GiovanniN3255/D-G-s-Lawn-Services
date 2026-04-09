@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&amp;G's Lawn Services | Premium Lawn Care in Omaha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+        :root {
+            --lux-green: #0A1F13;
+            --lux-gold: #C5A059;
+            --lux-gold-hover: #D4B26A;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC;
+            color: #1E293B;
+        }
+
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .bg-lux-green { background-color: var(--lux-green); }
+        .text-lux-green { color: var(--lux-green); }
+        .bg-lux-gold { background-color: var(--lux-gold); }
+        .text-lux-gold { color: var(--lux-gold); }
+        .border-lux-gold { border-color: var(--lux-gold); }
+        .hover\:bg-lux-gold:hover { background-color: var(--lux-gold-hover); }
+
+        /* Minimalist Input Styling */
+        .input-lux {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #94A3B8;
+            padding: 0.75rem 0;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .input-lux:focus {
+            outline: none;
+            border-bottom-color: var(--lux-gold);
+        }
+        .input-lux::placeholder {
+            color: #94A3B8;
+            font-weight: 300;
+        }
+
+        /* Subtle animations */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Custom Scrollbar for luxury feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--lux-green);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-lux-gold selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm py-4">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group">
+                <span class="font-serif text-2xl font-bold text-lux-green tracking-tight group-hover:text-lux-gold transition-colors">D&amp;G's</span>
+                <span class="text-sm tracking-widest text-gray-500 uppercase mt-1 hidden sm:block">Lawn Services</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#services" class="text-sm font-medium text-gray-600 hover:text-lux-gold transition-colors tracking-wide uppercase">Services</a>
+                <a href="#story" class="text-sm font-medium text-gray-600 hover:text-lux-gold transition-colors tracking-wide uppercase">Our Story</a>
+                <a href="#reviews" class="text-sm font-medium text-gray-600 hover:text-lux-gold transition-colors tracking-wide uppercase">Reviews</a>
+            </div>
+
+            <a href="#quote" class="bg-lux-green text-white px-6 py-2.5 rounded text-sm font-medium tracking-wide uppercase hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg">
+                Get a Quote
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1616077168737-6b1884d804e0?w=1600&amp;h=1080&amp;q=80&amp;auto=format&amp;fit=crop" alt="Luxurious modern estate in Omaha at golden hour with an immaculately manicured, lush green lawn and precise edging" class="w-full h-full object-cover object-center">
+            <!-- Dark Overlay for contrast -->
+            <div class="absolute inset-0 bg-gradient-to-b from-lux-green/80 via-lux-green/60 to-black/80"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto mt-20">
+            <span class="block text-lux-gold font-medium tracking-[0.2em] uppercase mb-4 fade-in-up text-sm sm:text-base">Omaha's Premier Lawn Care</span>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight fade-in-up delay-100">
+                Spectacular Lawns.<br>Uncompromising Service.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light leading-relaxed fade-in-up delay-200">
+                Driven by youthful energy and exacting standards, D&amp;G's delivers the finest lawn maintenance, landscaping, and exterior care in Omaha, Nebraska.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-up delay-300">
+                <a href="#quote" class="bg-lux-gold hover:bg-lux-gold-hover text-white px-8 py-4 rounded font-medium tracking-wide uppercase transition-all shadow-[0_0_20px_rgba(197,160,89,0.3)]">
+                    Book Your Transformation
+                </a>
+                <a href="#services" class="bg-transparent border border-white text-white px-8 py-4 rounded font-medium tracking-wide uppercase hover:bg-white hover:text-lux-green transition-all">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10 hidden sm:block">
+            <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Trust Banner -->
+    <section class="bg-lux-green py-8 relative z-20 shadow-xl">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+                <div class="py-2">
+                    <div class="text-lux-gold mb-2 flex justify-center">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="text-white font-serif text-lg">Local to Omaha, NE</h3>
+                    <p class="text-gray-400 text-sm mt-1">Proudly serving our community.</p>
+                </div>
+                <div class="py-2">
+                    <div class="text-lux-gold mb-2 flex justify-center">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                    </div>
+                    <h3 class="text-white font-serif text-lg">Amazing Customer Service</h3>
+                    <p class="text-gray-400 text-sm mt-1">We treat your property like our own.</p>
+                </div>
+                <div class="py-2">
+                    <div class="text-lux-gold mb-2 flex justify-center">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                    </div>
+                    <h3 class="text-white font-serif text-lg">Spectacular Work</h3>
+                    <p class="text-gray-400 text-sm mt-1">The best of the best results, guaranteed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-lux-gold font-medium tracking-widest uppercase text-sm">Comprehensive Care</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-lux-green mt-4 mb-4">Our Premium Services</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">From meticulous mowing to complete exterior detailing, we offer a full suite of services designed to elevate your property's curb appeal.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+                <!-- Service 1 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg mb-6 shadow-md aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1739938735189-8ac1ea7493bd?w=600&amp;h=450&amp;q=80&amp;auto=format&amp;fit=crop" alt="Close up of a professional lawn mower cutting perfectly straight stripes into dark green grass" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    </div>
+                    <h3 class="text-2xl font-serif text-lux-green mb-2 group-hover:text-lux-gold transition-colors">Precision Mowing</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">Flawless striping, optimal cutting heights, and meticulous attention to turf health for a carpet-like finish.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg mb-6 shadow-md aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1742037140930-5c578ec672d4?w=600&amp;h=450&amp;q=80&amp;auto=format&amp;fit=crop" alt="Crisp, clean edge along a concrete sidewalk separating dark mulch and bright green lawn" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    </div>
+                    <h3 class="text-2xl font-serif text-lux-green mb-2 group-hover:text-lux-gold transition-colors">Edging &amp; Trimming</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">Creating sharp, defined boundaries between your lawn, hardscapes, and garden beds for a polished, architectural look.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg mb-6 shadow-md aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1756877881647-7d5792685751?w=600&amp;h=450&amp;q=80&amp;auto=format&amp;fit=crop" alt="Fresh dark brown premium mulch neatly spread around blooming landscape plants" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    </div>
+                    <h3 class="text-2xl font-serif text-lux-green mb-2 group-hover:text-lux-gold transition-colors">Premium Mulching</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">High-grade mulch installation to retain moisture, suppress weeds, and provide a rich contrast to your plantings.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg mb-6 shadow-md aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1761678483926-0e34fdce6399?w=600&amp;h=450&amp;q=80&amp;auto=format&amp;fit=crop" alt="Worker removing brush and debris from a yard during a seasonal clean up" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    </div>
+                    <h3 class="text-2xl font-serif text-lux-green mb-2 group-hover:text-lux-gold transition-colors">Yard Cleanups &amp; Removals</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">Seasonal cleanups, leaf removal, and brush clearing to keep your property immaculate year-round.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg mb-6 shadow-md aspect-[4/3]">
+                        <img src="https://img.placeholder.yuzzah.app/600x450" alt="Water flowing freely out of a perfectly clean metal gutter on a luxury home" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    </div>
+                    <h3 class="text-2xl font-serif text-lux-green mb-2 group-hover:text-lux-gold transition-colors">Gutter Cleaning</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">Protecting your home's foundation and exterior by ensuring clear, free-flowing gutters and downspouts.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg mb-6 shadow-md aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1744439918826-523c858f2425?w=600&amp;h=450&amp;q=80&amp;auto=format&amp;fit=crop" alt="Squeegee gliding across a large pane glass window leaving it sparkling clean and streak free" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    </div>
+                    <h3 class="text-2xl font-serif text-lux-green mb-2 group-hover:text-lux-gold transition-colors">Exterior Window Cleaning</h3>
+                    <p class="text-gray-600 font-light leading-relaxed">Streak-free exterior window washing to let the Omaha sunshine in and complement your perfect lawn.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <p class="text-gray-500 italic font-serif text-lg mb-6">...and more specialized exterior services tailored to your estate.</p>
+                <a href="#quote" class="inline-flex items-center gap-2 text-lux-green font-semibold uppercase tracking-widest hover:text-lux-gold transition-colors group">
+                    Request a Custom Service List
+                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The D&G Story / "Junior" Angle -->
+    <section id="story" class="py-24 bg-slate-50 relative overflow-hidden">
+        <!-- Decorative background element -->
+        <div class="absolute top-0 right-0 -mr-40 -mt-40 w-[600px] h-[600px] bg-lux-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                
+                <!-- Image side -->
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute -inset-4 border border-lux-gold/30 rounded-lg transform translate-x-4 translate-y-4"></div>
+                    <img src="https://images.unsplash.com/photo-1598267416816-2fc7a6058eaa?w=800&amp;h=1000&amp;q=80&amp;auto=format&amp;fit=crop" alt="Two sharp, focused young men in matching D&amp;G Lawn Services polo shirts standing proudly in front of a pristine landscaped yard" class="w-full h-auto object-cover rounded-lg shadow-2xl relative z-10">
+                    
+                    <!-- Floating badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-xl z-20 border-l-4 border-lux-gold">
+                        <p class="text-4xl font-serif font-bold text-lux-green mb-1">100%</p>
+                        <p class="text-sm font-bold text-gray-500 uppercase tracking-wider">Omaha Owned<br>&amp; Operated</p>
+                    </div>
+                </div>
+
+                <!-- Text side -->
+                <div class="w-full lg:w-1/2">
+                    <span class="text-lux-gold font-medium tracking-widest uppercase text-sm">The D&amp;G Difference</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-lux-green mt-4 mb-6">Unmatched Hustle.<br>Spectacular Results.</h2>
+                    
+                    <div class="space-y-6 text-gray-600 font-light leading-relaxed text-lg">
+                        <p>
+                            D&amp;G's Lawn Services isn't your average landscaping company. We are proudly run by a dedicated team of Omaha high school juniors who have redefined what it means to deliver luxury service. 
+                        </p>
+                        <p>
+                            Don't let our age fool you. What we possess is boundless energy, an obsessive attention to detail, and a burning desire to out-work and out-perform every competitor in the region. We built this business on the foundation that hard work, combined with a commitment to perfection, creates spectacular lawns.
+                        </p>
+                        <p>
+                            When you hire D&amp;G's, you aren't just getting lawn care; you are investing in local youth who provide amazing, white-glove customer service that larger, corporate outfits simply cannot match. We are the best of the best in Omaha, and we're ready to prove it.
+                        </p>
+                    </div>
+
+                    <div class="mt-10 flex items-center gap-6">
+                        <img src="https://images.unsplash.com/photo-1716647710056-e54068c05df5?w=100&amp;h=100&amp;q=80&amp;auto=format&amp;fit=crop" alt="Signature of the founders" class="h-12 opacity-50 grayscale mix-blend-multiply">
+                        <div>
+                            <p class="font-serif font-bold text-lux-green text-xl">Founders, D&amp;G's</p>
+                            <p class="text-sm text-gray-400 uppercase tracking-wider">Omaha, Nebraska</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Social Proof -->
+    <section id="reviews" class="py-24 bg-lux-green text-white relative">
+        <!-- Subtle Pattern Overlay -->
+        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4">What Omaha is Saying</h2>
+                <div class="w-24 h-1 bg-lux-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-lg backdrop-blur-sm relative">
+                    <div class="text-lux-gold mb-4">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path></svg>
+                    </div>
+                    <p class="text-gray-300 font-light mb-6 leading-relaxed">"Absolutely phenomenal service. I was skeptical knowing they were high schoolers, but their professionalism and the quality of the edging and mowing put my previous landscaper to shame. Best in Omaha, hands down."</p>
+                    <div>
+                        <p class="font-serif font-bold text-white text-lg">Sarah Jenkins</p>
+                        <p class="text-lux-gold text-sm uppercase tracking-wider">West Omaha</p>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-lg backdrop-blur-sm relative transform md:-translate-y-4">
+                    <div class="text-lux-gold mb-4">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path></svg>
+                    </div>
+                    <p class="text-gray-300 font-light mb-6 leading-relaxed">"D&amp;G's did a massive yard cleanup, mulching, and window cleaning for our estate. The young men were polite, incredibly hard-working, and the results were spectacular. They have earned a customer for life."</p>
+                    <div>
+                        <p class="font-serif font-bold text-white text-lg">Robert M.</p>
+                        <p class="text-lux-gold text-sm uppercase tracking-wider">Elkhorn</p>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-lg backdrop-blur-sm relative">
+                    <div class="text-lux-gold mb-4">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path></svg>
+                    </div>
+                    <p class="text-gray-300 font-light mb-6 leading-relaxed">"Their customer service is amazing. They always show up on time, communicate clearly, and leave the property looking immaculate. It's refreshing to see such driven youth providing such high-end service."</p>
+                    <div>
+                        <p class="font-serif font-bold text-white text-lg">The Thompson Family</p>
+                        <p class="text-lux-gold text-sm uppercase tracking-wider">Papillion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- High-Converting CTA / Contact Form -->
+    <section id="quote" class="py-24 bg-white relative">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="bg-slate-50 rounded-2xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+                
+                <!-- CTA Text / Info side -->
+                <div class="w-full lg:w-5/12 bg-lux-green text-white p-12 flex flex-col justify-center relative">
+                    <div class="absolute top-0 right-0 p-8 opacity-20 text-lux-gold">
+                        <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+                    </div>
+                    
+                    <div class="relative z-10">
+                        <h2 class="text-4xl font-serif font-bold mb-6">Experience the Best in Omaha.</h2>
+                        <p class="text-gray-300 font-light mb-10 leading-relaxed text-lg">
+                            Ready for spectacular work? Contact D&amp;G's today for a complimentary property assessment and custom quote. Let us show you what amazing customer service truly looks like.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-lux-gold/20 p-3 rounded-full text-lux-gold">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400 uppercase tracking-wider">Call or Text</p>
+                                    <p class="font-serif text-xl">(402) 981-2632</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-lux-gold/20 p-3 rounded-full text-lux-gold">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400 uppercase tracking-wider">Email</p>
+                                    <p class="font-serif text-lg">dnglawnservice1@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Side -->
+                <div class="w-full lg:w-7/12 p-12 lg:p-16">
+                    <h3 class="text-2xl font-serif text-lux-green mb-8">Request Your Free Quote</h3>
+                    <form action="#" method="POST" class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <label for="name" class="sr-only">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Full Name *" required="" class="input-lux pointer-events-auto">
+                            </div>
+                            <div>
+                                <label for="phone" class="sr-only">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number *" required="" class="input-lux pointer-events-auto">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="address" class="sr-only">Property Address (Omaha Area)</label>
+                            <input type="text" id="address" name="address" placeholder="Property Address (Omaha Area) *" required="" class="input-lux pointer-events-auto">
+                        </div>
+
+                        <div>
+                            <label for="service" class="block text-sm text-gray-500 mb-2 font-medium">Services Interested In:</label>
+                            <select id="service" name="service" class="w-full bg-transparent border-b border-gray-400 py-2 focus:outline-none focus:border-lux-gold text-gray-700 cursor-pointer pointer-events-auto">
+                                <option value="" disabled="" selected="">Select primary service...</option>
+                                <option value="mowing">Precision Mowing &amp; Edging</option>
+                                <option value="mulching">Premium Mulching</option>
+                                <option value="cleanup">Yard Cleanup &amp; Removal</option>
+                                <option value="gutters">Gutter Cleaning</option>
+                                <option value="windows">Exterior Window Cleaning</option>
+                                <option value="multiple">Multiple Services / Full Package</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="details" class="sr-only">Additional Details</label>
+                            <textarea id="details" name="details" rows="3" placeholder="Tell us about your property and goals..." class="input-lux resize-none pointer-events-auto"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-lux-green hover:bg-opacity-90 text-white font-medium py-4 uppercase tracking-widest transition-all shadow-md hover:shadow-lg pointer-events-auto">
+                            Send Request
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#050f09] text-gray-400 py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <a href="#" class="font-serif text-2xl font-bold text-white tracking-tight mb-2 block">D&amp;G's Lawn Services</a>
+                <p class="text-sm">Omaha's Premium Choice, Powered by Youthful Dedication.</p>
+            </div>
+            
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-lux-gold transition-colors">
+                    <span class="sr-only">Instagram</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path></svg>
+                </a>
+                <a href="#" class="hover:text-lux-gold transition-colors">
+                    <span class="sr-only">Facebook</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 mt-8 pt-8 border-t border-white/5 text-center text-xs text-gray-500">
+            © 2023 D&amp;G's Lawn Services. All rights reserved. Providing premium lawn care to Omaha, NE.
+        </div>
+    </footer>
+
+
+
+```</body></html>
